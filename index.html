@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Hadoop源码深度解析</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="深入分析Hadoop生态系统的核心组件、架构设计、源码实现和实践应用">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    :root {
+      --theme-color: #42b883;
+      --text-color-base: #34495e;
+      --text-color-secondary: #7f8c8d;
+    }
+    
+    .app-name-link img {
+      width: 2rem;
+    }
+    
+    .markdown-section {
+      max-width: 80%;
+    }
+    
+    .markdown-section pre {
+      background-color: #f8f8f8;
+      border-radius: 6px;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .markdown-section code {
+      background-color: #f1f2f3;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    }
+    
+    .sidebar-nav > ul > li > a {
+      font-weight: 600;
+    }
+    
+    .sidebar-nav ul li ul {
+      padding-left: 20px;
+    }
+    
+    .sidebar-nav ul li ul li a {
+      font-weight: normal;
+      font-size: 14px;
+    }
+    
+    /* 自定义代码块样式 */
+    .token.keyword {
+      color: #d73a49;
+    }
+    
+    .token.string {
+      color: #032f62;
+    }
+    
+    .token.comment {
+      color: #6a737d;
+    }
+    
+    .token.function {
+      color: #6f42c1;
+    }
+    
+    .token.class-name {
+      color: #e36209;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">📚 加载中...</div>
+  <script>
+    window.$docsify = {
+      name: 'Hadoop源码深度解析',
+      repo: 'https://github.com/hadoop-book/hadoop-source-analysis',
+      loadSidebar: true,
+      loadNavbar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      homepage: 'README.md',
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😞 找不到结果',
+        depth: 6,
+        hideOtherSidebarContent: false,
+      },
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
+      },
+      pagination: {
+        previousText: '上一章',
+        nextText: '下一章',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      copyCode: {
+        buttonText: '📋 复制',
+        errorText: '❌ 复制失败',
+        successText: '✅ 已复制'
+      },
+      tabs: {
+        persist: true,
+        sync: true,
+        theme: 'classic',
+        tabComments: true,
+        tabHeadings: true
+      },
+      'flexible-alerts': {
+        style: 'flat'
+      },
+      progress: {
+        position: "top",
+        color: "var(--theme-color,#42b883)",
+        height: "3px",
+      }
+    }
+  </script>
+  
+  <!-- Docsify核心 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  
+  <!-- 插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
+  
+  <!-- 代码高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-xml-doc.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-properties.min.js"></script>
+  
+  <!-- KaTeX数学公式支持 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
+</body>
+</html>
